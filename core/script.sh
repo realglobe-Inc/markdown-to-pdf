@@ -32,7 +32,7 @@ filename="$(basename "${1}")"
   md_list=.markdown.list
   find . -path '*.md' -printf '%P\n' >"${md_list}"
 
-  pdf_dir=pdf
+  pdf_dir=.pdf
   rm -rf "${pdf_dir}"
   mkdir "${pdf_dir}"
   pdf_list=.pdf.list
