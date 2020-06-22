@@ -1,23 +1,17 @@
-# Cloud Runの使い方
+# Markdown to PDF
 
-```console
-$ gcloud builds submit --tag gcr.io/<PROJECT-ID>/helloworld
-$ gcloud run deploy --image gcr.io/<PROJECT-ID>/helloworld --platform managed
-```
+## コアサービス
 
-## 構想
+* [core](core)
 
-### Markdown to PDF
+MarkdownをPDFに変換するサービス。
 
-* これはできそう
+---
 
-Multipartで.mdファイルや画像を受け取り、.mdファイルが1つならPDFファイルを返す。
-.mdファイルが複数なら複数のPDFをtarで固めたファイルを返す。
+以下、構想。
 
-### Google Driveコネクタ
+## Google Driveコネクタ
 
 Google Driveアプリ。
 
-* これはできるか未検証
-
-Driveの選択されたファイルをMultipartに入れてMarkdown to PDFに投げて、返ってきたPDFをDriveの元の.mdファイルの場所に置く。
+Google Driveで選択したファイルをコアサービスに投げて、返ってきたPDFを元のMarkdownと同じ場所に置く。
